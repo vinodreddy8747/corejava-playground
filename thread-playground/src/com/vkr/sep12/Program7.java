@@ -13,7 +13,6 @@ for another resource acquired by some other process.
  */
 class ThreadUtil 
 { 
-    // Util class to sleep a thread 
     static void sleep(long millis) 
     { 
         try
@@ -27,7 +26,6 @@ class ThreadUtil
     } 
 } 
   
-// This class is shared by both threads 
 class Shared 
 { 
     // first synchronized method 
@@ -58,15 +56,12 @@ class Thread1 extends Thread
 { 
     private Shared s1; 
     private Shared s2; 
-  
-    // constructor to initialize fields 
     public Thread1(Shared s1, Shared s2) 
     { 
         this.s1 = s1; 
         this.s2 = s2; 
     } 
   
-    // run method to start a thread 
     @Override
     public void run() 
     { 
@@ -82,14 +77,12 @@ class Thread2 extends Thread
     private Shared s1; 
     private Shared s2; 
   
-    // constructor to initialize fields 
     public Thread2(Shared s1, Shared s2) 
     { 
         this.s1 = s1; 
         this.s2 = s2; 
     } 
   
-    // run method to start a thread 
     @Override
     public void run() 
     { 
@@ -104,17 +97,13 @@ public class Program7
 { 
     public static void main(String[] args) 
     { 
-        // creating one object 
         Shared s1 = new Shared(); 
   
-        // creating second object 
         Shared s2 = new Shared(); 
   
-        // creating first thread and starting it 
         Thread1 t1 = new Thread1(s1, s2); 
         t1.start(); 
   
-        // creating second thread and starting it 
         Thread2 t2 = new Thread2(s1, s2); 
         t2.start(); 
   

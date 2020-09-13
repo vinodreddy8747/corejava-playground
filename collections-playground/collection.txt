@@ -1,0 +1,88 @@
+What is Collection?
+
+Group of individual objects which are represented as a single unit is called "Collection".
+
+In JAVA collection framework defined in JDK 1.2
+
+2 MAIN ROOT Interfaces of java
+-> java.util.Collection I
+-> java.util.Map I
+
+What is a framework?
+
+Framework is a set of classes and interfaces which provide ready made features.
+
+What is the need of Collection framework?
+Before JDK 1.2 , the standrad methods of grouping set of objects were "Arrays, Vector and HashTable".
+All of these are not have common interface, 
+There-fore, the main aim of all the collections are same (add, update, remove, read). 
+All these are implemented individually , So the 
+users are not able to remember the methods and variables which declared on these classes.
+
+Drawbacks of using before Collection:
+=======================================
+1). difficult for programmers to write and algorithm which support 
+    all kind of collections, since 3 are not implements common interface.
+2). Most of Vector methods are final so we cann't extend and create subclass to Vector.
+
+There-fore JAVA developers come up with and solution for above drawbacks by introducing Collection Framework.
+
+Advantages of Collection:
+===========================
+1). Consistent API: The API has a basic set of interfaces like Collection, Set, List, or Map,
+ all the classes (ArrayList, LinkedList, Vector, etc) that implement these interfaces have some common set of methods.
+2). Reduces programming effort
+3). Increases program speed and quality
+
+
+Hierarchy of the Collection Framework
+========================================
+-> java.util package has all collction framework classes and interfaces
+-> colection framework contains Iterable I/F which provides Iterator to iterate through all the collections.
+Class: A class is a user-defined blueprint or prototype from which objects are created. 
+It represents the set of properties or methods that are common to all objects of one type.
+
+Interface: Like a class, an interface can have methods and variables, 
+but the methods declared in an interface are by default abstract (only method signature, no body).
+ Interfaces specify what a class must do and not how. It is the blueprint of the class.
+ 
+ 
+Methods of the Collection Interface
+====================================
+
+add(Object)	This method is used to add an object to the collection.
+addAll(Collection c)	This method adds all the elements in the given collection to this collection.
+clear()	This method removes all of the elements from this collection.
+contains(Object o)	This method returns true if the collection contains the specified element.
+containsAll(Collection c)	This method returns true if the collection 
+							contains all of the elements in the given collection.
+equals(Object o)	This method compares the specified object with this collection for equality.
+hashCode()	This method is used to return the hash code value for this collection.
+isEmpty()	This method returns true if this collection contains no elements.
+iterator()	This method returns an iterator over the elements in this collection.
+max()	This method is used to return the maximium value present in the collection.
+parallelStream()	This method returns a parallel Stream with this collection as its source.
+remove(Object o)	This method is used to remove the given object from the collection.
+					 If there are duplicate values, then this method removes the first occurrence of the object.
+removeAll(Collection c)	This method is used to remove all the objects mentioned in 
+`						the given collection from the collection.
+removeIf(Predicate filter)	This method is used to removes all the elements of 
+	`						this collection that satisfy the given predicate.
+retainAll(Collection c)	This method is used to retains only the elements in this collection 
+						that are contained in the specified collection.
+size()	This method is used to return the number of elements in the collection.
+spliterator()	This method is used to create a Spliterator over the elements in this collection.
+stream()	This method is used to return a sequential Stream with this collection as its source.
+toArray()	This method is used to return an array containing all of the elements in this collection.
+
+
+================================================
+Iterable I/F super to Collection I/F
+Collection I/F
+List I/F
+Queue I/F
+Set I/F
+Sorted Set I/F
+Map I/F
+================================================
+
