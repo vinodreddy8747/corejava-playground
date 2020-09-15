@@ -86,3 +86,26 @@ Sorted Set I/F
 Map I/F
 ================================================
 
+***
+Difference between AL and LL
+
+AL - dynamic array internally
+LL - double linked list
+
+AL - maintaining AL is difficult bcz remove or add element 
+		internally need, array is traversed and the memory bits are shifted
+		
+LL -  maintaining LL is easy bcz there is no need of traversing ,
+	  bcz each and every element of LL is NODE which is link to the another node,
+	  where ever we need we can add and remove elements easily.
+	  
+AL - impl List
+LL - impls List and Deque
+
+Al - when we have store and read data
+LL - when we have manipulate the data use LL
+
+
+=============================================
+
+
